@@ -1,75 +1,183 @@
-DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Your Name - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative; /* Add this */
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Add styles for the round profile picture */
+        .profile-picture {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px;
+            border-radius: 75%; /* Create a circular shape */
+            object-fit: cover; /* To ensure the image fills the circular area */
+            position: absolute; /* Add this */
+            top: 75px; /* Adjust top position as needed */
+            left: 75px; /* Adjust left position as needed */
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .section-content {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .download-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            align-self: center;
+        }
+
+        .download-button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Vinotha.p</h1>
-        <p>Student</p>
+        <div class="header-content">
+          
+            
+            <h1>Vinotha.p</h1>
+            <p>Student</p>
+        </div>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I am Vinotha pursuing a bachelors degree in computer science .As a computer science student i consider myself as a responsible and orderly person. I am looking forward for my first job experience to improve my skills in the IT Sector..</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>Bharathiar University-B.sc Computer science </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>python</li>
+                <li>java</li>
+                <li>word processor</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Attendence Management System</a></li>
+                <li><a href="#">E-Commerce</a></li>
+                <!-- Add more project links here -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
     
-    <section class="about">
-        <h2>About Me</h2>
-        <p>My strengths are being an honest person, a quick learner, and a self-motivated person. My short-term goal is to get a job at a reputed company. My long-term goal is to get a high position in your company, where I can start my career and help the organization too. That's all about me.</p>
+        <div class="section-content">
+            <center>
+            <h2>Resume</h2>
+            <a href="https://drive.google.com/file/d/1Fjf9NlokC-6Cvk6CimvWKehDOOl8855V/view?usp=sharing" target="_blank" class="download-button">Download CV</a>
+        </center>
+        </div>
+        
     </section>
 
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Attendence Management</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>E-Commerce</p>
-        </div>
-        <!-- Add more projects as needed -->
-    </section>
+    <footer>
+        <p>/p>
+    </footer>
+    <script>
+        // Smooth scrolling to section when clicking on navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: vinothapandi135@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/your-profile">https://www.linkedin.com/in/vinotha-pandi- 2a5750279</a></p>
-        <!-- Add other contact information as needed -->
-    </section>
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-/* Reset some default styles */
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Basic styling */
-body {
-    font-family: Arial,Times Newroman;
-    background-color: #f2f2f2;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-h1 {
-    font-size: 36px;
-}
-
-.about, .projects, .contact {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-.project {
-    margin-bottom: 20px;
-}
-
-/* Add more CSS styles as needed to customize your portfolio */
