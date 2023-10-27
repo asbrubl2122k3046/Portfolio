@@ -46,7 +46,7 @@ body, h1, h2, h3, p {
 
 /* Basic styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial,Times Newroman;
     background-color: #f2f2f2;
 }
 
